@@ -78,21 +78,21 @@ public class Main {
                         }
                     }
 
-                    int left = 0;
-                    int right = listPeminjaman.length - 1;
+                    int kiri = 0;
+                    int kanan = listPeminjaman.length - 1;
                     int foundIdx = -1;
 
-                    while (left <= right) {
-                        int mid = left + (right - left) / 2;
+                    while (kiri <= kanan) {
+                        int mid = kiri + (kanan - kiri) / 2;
                         int cmp = listPeminjaman[mid].mhs.nim.compareTo(cariNIM);
 
                         if (cmp == 0) {
                             foundIdx = mid;
                             break;
                         } else if (cmp < 0) {
-                            left = mid + 1;
+                            kiri = mid + 1;
                         } else {
-                            right = mid - 1;
+                            kanan = mid - 1;
                         }
                     }
 
