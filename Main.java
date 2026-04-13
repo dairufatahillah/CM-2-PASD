@@ -70,7 +70,7 @@ public class Main {
 
                     for (int i = 0; i < listPeminjaman.length - 1; i++) {
                         for (int j = 1; j < listPeminjaman.length - i; j++) {
-                            if (listPeminjaman[j - 1].mhs.nim.compareTo(listPeminjaman[j].mhs.nim) > 0) {
+                            if (listPeminjaman[j - 1].mhs.nim.compareToIgnoreCase(listPeminjaman[j].mhs.nim) > 0) {
                                 Peminjaman tmp = listPeminjaman[j];
                                 listPeminjaman[j] = listPeminjaman[j - 1];
                                 listPeminjaman[j - 1] = tmp;
@@ -84,7 +84,7 @@ public class Main {
 
                     while (kiri <= kanan) {
                         int mid = kiri + (kanan - kiri) / 2;
-                        int cmp = listPeminjaman[mid].mhs.nim.compareTo(cariNIM);
+                        int cmp = listPeminjaman[mid].mhs.nim.compareToIgnoreCase(cariNIM);
 
                         if (cmp == 0) {
                             foundIdx = mid;

@@ -10,7 +10,7 @@ public class Peminjaman {
         this.mhs = mhs;
         this.buku = buku;
         this.lamaPinjam = lamaPinjam;
-        hitungDenda(); // Langsung hitung saat diobjekkan
+        hitungDenda();
     }
 
     public void hitungDenda() {
@@ -25,6 +25,6 @@ public class Peminjaman {
 
     public void tampilPeminjaman() {
         System.out.println(mhs.nama + " | " + buku.judul + " | Lama: " + lamaPinjam + 
-                           " | Terlambat: " + terlambat + " | Denda: " + denda);
+        " | Terlambat: " + terlambat + " | Denda: " + denda);
     }
 }
